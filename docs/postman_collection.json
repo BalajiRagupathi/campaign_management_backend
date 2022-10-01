@@ -1,0 +1,297 @@
+{
+    "info": {
+        "_postman_id": "9ffabae7-dd76-4a4f-9cb9-327f30f42a06",
+        "name": "campaign_management",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.0.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Login Authentication",
+            "id": "d8d136b3-036a-409b-8329-ae25804e6531",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"email\":\"rahulkrishnanr016@gmail.com\",\n    \"password\":\"Rahul@123\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "http:\/\/localhost:3001\/rest\/api\/v1\/user\/authenticate"
+            },
+            "response": []
+        },
+        {
+            "name": "get all user data",
+            "id": "4d65bf3e-f294-48f4-915d-c6e6e217ace9",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "type": "text",
+                        "value": "application\/json"
+                    },
+                    {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QGFkbWluLmNvbSIsImF1dGgiOiJhZG1pbiIsImlhdCI6MTYxNTI0NjI3NywiZXhwIjoxNjE1NDYyMjc3fQ.kxV1xEdVhfNv-tg84y3tfZuWL_6BEZX5n58kC7NklJ8"
+                    }
+                ],
+                "url": "http:\/\/localhost:3001\/rest\/api\/v1\/user"
+            },
+            "response": []
+        },
+        {
+            "name": "signup",
+            "id": "50d8c401-1e5a-4d5a-a081-7009d1123e2a",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application\/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Authorization",
+                        "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QGFkbWluLmNvbSIsImF1dGgiOiJhZG1pbiIsImlhdCI6MTYxNTI0NjI3NywiZXhwIjoxNjE1NDYyMjc3fQ.kxV1xEdVhfNv-tg84y3tfZuWL_6BEZX5n58kC7NklJ8",
+                        "type": "text",
+                        "disabled": true
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\":\"Rahul krishnan\",\n    \"email\":\"rahulkrishnanr016@gmail.com\",\n    \"phone\":78765459799976,\n    \"password\":\"test\",\n    \"role\":\"user\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "http:\/\/localhost:3001\/rest\/api\/v1\/user\/signup"
+            },
+            "response": []
+        },
+        {
+            "name": "get user by id",
+            "id": "49fb55c4-d418-4388-ac9e-e03a73604b90",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application\/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Authorization",
+                        "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWh1bGtyaXNobmFucjAxNkBnbWFpbC5jb20iLCJhdXRoIjoidXNlciIsImlhdCI6MTYxNTQwMDQ3MCwiZXhwIjoxNjE1NjE2NDcwfQ.2Vn7JAfEs_bGKfqSGAshIe9Hajvrs9HX24SneT7aIYw",
+                        "type": "text"
+                    }
+                ],
+                "url": "http:\/\/localhost:3001\/rest\/api\/v1\/user\/12"
+            },
+            "response": []
+        },
+        {
+            "name": "edit user data",
+            "id": "1302bf7c-d83f-4c08-a01d-a2d4151f0cf1",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application\/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Authorization",
+                        "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QGFkbWluLmNvbSIsImF1dGgiOiJhZG1pbiIsImlhdCI6MTYxNTI0NjI3NywiZXhwIjoxNjE1NDYyMjc3fQ.kxV1xEdVhfNv-tg84y3tfZuWL_6BEZX5n58kC7NklJ8",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": " {\n        \"name\": \"admin\",\n        \"email\": \"test@admin.com\",\n        \"phone\": 23456,\n        \"password\": \"test\",\n        \"role\": \"admin\"\n    }",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "http:\/\/localhost:3001\/rest\/api\/v1\/user\/1"
+            },
+            "response": []
+        },
+        {
+            "name": "delete user data",
+            "id": "2c24e28c-3b5d-4ce5-be68-84f85ae01290",
+            "request": {
+                "method": "DELETE",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application\/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Authorization",
+                        "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QGFkbWluLmNvbSIsImF1dGgiOiJhZG1pbiIsImlhdCI6MTYxNTI0NjI3NywiZXhwIjoxNjE1NDYyMjc3fQ.kxV1xEdVhfNv-tg84y3tfZuWL_6BEZX5n58kC7NklJ8",
+                        "type": "text"
+                    }
+                ],
+                "url": "http:\/\/localhost:3001\/rest\/api\/v1\/user\/1002"
+            },
+            "response": []
+        },
+        {
+            "name": "token validation",
+            "id": "bd39d5f9-5184-4389-aa53-7574589aa66c",
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "http:\/\/localhost:3001\/rest\/api\/v1\/user\/validate\/eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QGFkbWluLmNvbSIsImF1dGgiOiJhZG1pbiIsImlhdCI6MTYxNTI3NTc2MiwiZXhwIjoxNjE1NDkxNzYyfQ.Jn8PqyZrdUlMB5UnrX_162q-nSJT5iZY4kxw-LZD6WA"
+            },
+            "response": []
+        },
+        {
+            "name": "forgotpassword_generate_otp_link",
+            "id": "b77a12e0-c16e-4432-90c9-ad048b3e10f2",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"email\":\"rahulkrishnanr016@gmail.com\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "http:\/\/localhost:3001\/rest\/api\/v1\/user\/forgotpassword\/generate\/otp"
+            },
+            "response": []
+        },
+        {
+            "name": "forward password",
+            "id": "ae17c610-47f9-44a6-80ff-ea3cc899a77e",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"password\":\"test123\",\n    \"otp\":\"17917\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "http:\/\/localhost:3001\/rest\/api\/v1\/user\/forgotpassword\/reset"
+            },
+            "response": []
+        },
+        {
+            "name": "changing new password",
+            "id": "8c2a5078-d652-4a2a-b552-ce1cca45d10c",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application\/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Authorization",
+                        "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWh1bGtyaXNobmFucjAxNkBnbWFpbC5jb20iLCJhdXRoIjoidXNlciIsImlhdCI6MTYxNTM4MjIzNywiZXhwIjoxNjE1NTk4MjM3fQ.TlpLb4T57a2i-SnqHbBa6TOTyeW04U0bmAktUgjeAMI",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"email\":\"rahulkrishnanr016@gmail.com\",\n    \"oldPassword\":\"test123\",\n    \"newPassword\":\"test\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "http:\/\/localhost:3001\/rest\/api\/v1\/user\/newpassword"
+            },
+            "response": []
+        },
+        {
+            "name": "send sms",
+            "id": "f60c08ac-1daa-4e3f-9db8-899cc50c8a16",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application\/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Authorization",
+                        "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWh1bGtyaXNobmFucjAxNkBnbWFpbC5jb20iLCJhdXRoIjoidXNlciIsImlhdCI6MTYxNTQ0NDg1OCwiZXhwIjoxNjE1NjYwODU4fQ.KB3R5LU-I0vD6sZsABcdU86X350u_KkVrT7z7QH6IoE",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"message\":\"hello rahul\",\n    \"phoneNumber\":\"+917397570896\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "http:\/\/localhost:3001\/rest\/api\/v1\/sms\/generateOtp"
+            },
+            "response": []
+        },
+        {
+            "name": "verifyphonenumberOtp",
+            "id": "6d71bafc-e49f-4fd2-a9a8-d7ed00777f8e",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application\/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Authorization",
+                        "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYWh1bGtyaXNobmFucjAxNkBnbWFpbC5jb20iLCJhdXRoIjoidXNlciIsImlhdCI6MTYxNTQ0OTAxOCwiZXhwIjoxNjE1NjY1MDE4fQ.GY1eG-gZafvVD81prYk2xXzjcdqKxCxvvNiNkh9Gvp8",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"otp\":\"18176\"\n}"
+                },
+                "url": "http:\/\/localhost:3001\/rest\/api\/v1\/sms\/verifyPhoneNumber"
+            },
+            "response": []
+        }
+    ]
+}
